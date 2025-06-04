@@ -42,22 +42,24 @@ POST /send_message
     "mda_user_id": Optional["List"],
     "sid": "Optional[int]"
     "sent_from": "Optional[int]"
+    "message_importance_sid": "int"
   }
 ```
 ```
-Field Name           | Description
----------------------|--------------------------------------------------------------------
-message              | Content of the message you're sending.
-title                | Brief description or subject of the message.
-message_type_fk      | Type of message: [1] Normal message, [2] Automated message, [3] Scheduled message.
-message_subject      | Subject of the message (can be same as title).
-body_html            | HTML body of the content you're sending.
-time_limit           | How long should I wait between sending messages to a user? 0 will be instant. 
-resend               | Flag for resending Firebase notifications (optional).
-unit_list            | List of units to which the message will be sent. Example: [{"unit_number": "the_unit_number"}].
-mda_user_id          | List of units to which the message will be sent. Example: [{"user_id": "user_id"}].
-sid                  | SID of the message if you're sending a resend (optional).
-sent_from            | default value is 1, but can be set to any integer
+Field Name               | Description
+-------------------------|--------------------------------------------------------------------
+message                  | Content of the message you're sending.
+title                    | Brief description or subject of the message.
+message_type_fk          | Type of message: [1] Normal message, [2] Automated message, [3] Scheduled message.
+message_subject          | Subject of the message (can be same as title).
+body_html                | HTML body of the content you're sending.
+time_limit               | How long should I wait between sending messages to a user? 0 will be instant. 
+resend                   | Flag for resending Firebase notifications (optional).
+unit_list                | List of units to which the message will be sent. Example: [{"unit_number": "the_unit_number"}].
+mda_user_id              | List of units to which the message will be sent. Example: [{"user_id": "user_id"}].
+sid                      | SID of the message if you're sending a resend (optional).
+sent_from                | default value is 1, but can be set to any integer.
+message_importance_sid   | 1-Normal, 2-Important, 3-Very Important.
 ```
 Success Response
 ```

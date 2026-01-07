@@ -8,7 +8,7 @@ Add the following header to your API calls to authenticate
 ```
 Authorization: Bearer your-token-here
 ```
-The token is configured in the production database table name bearer_token sid 1
+The token is pre-configured and is available on request
 ## Format
 The API expects data to be posted in JSON format and will reply with JSON data.
 The `Content-Type: application/json` header should be set on requests.
